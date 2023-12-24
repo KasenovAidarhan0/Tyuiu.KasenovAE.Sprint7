@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E3E3EE6-ACAB-445A-BD8A-7AEC423C6F18}</ProjectGuid>
+    <ProjectGuid>{64164956-50B8-4058-9018-11C8B99BFDD4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Tyuiu.KasenovAE.Sprint7.Project.V6.Test</RootNamespace>
@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataServiceTest.cs" />
@@ -54,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.KasenovAE.Sprint7.Project.V6.Lib\Tyuiu.KasenovAE.Sprint7.Project.V6.Lib.csproj">
+      <Project>{87db6d8e-a4e2-4edf-ad54-d8a7d1656f33}</Project>
+      <Name>Tyuiu.KasenovAE.Sprint7.Project.V6.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

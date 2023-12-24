@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C591882-6FF5-4EFE-871E-768C8E008136}</ProjectGuid>
+    <ProjectGuid>{5CA34477-E226-4041-90AF-BC943B0071D0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Tyuiu.KasenovAE.Sprint7.Project.V6</RootNamespace>
     <AssemblyName>Tyuiu.KasenovAE.Sprint7.Project.V6</AssemblyName>
@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.KasenovAE.Sprint7.Project.V6.Lib\Tyuiu.KasenovAE.Sprint7.Project.V6.Lib.csproj">
+      <Project>{87db6d8e-a4e2-4edf-ad54-d8a7d1656f33}</Project>
+      <Name>Tyuiu.KasenovAE.Sprint7.Project.V6.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
