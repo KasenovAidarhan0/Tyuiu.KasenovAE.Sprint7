@@ -221,5 +221,23 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonFrequency_KAE_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormStatistic form = new FormStatistic();
+                form.Show();
+                if (dataGridView_KAE.Rows.Count >= 1)
+                {
+                    string columnName = dataGridView_KAE.Columns[dataGridView_KAE.CurrentCell.ColumnIndex].Name;
+                    form.ShowChart(columnName);
+                }               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

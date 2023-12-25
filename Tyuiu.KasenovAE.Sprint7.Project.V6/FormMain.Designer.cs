@@ -31,6 +31,12 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu_KAE = new System.Windows.Forms.Panel();
+            this.buttonChange_KAE = new System.Windows.Forms.Button();
+            this.groupBoxFilter_KAE = new System.Windows.Forms.GroupBox();
+            this.buttonReturnDefault_KAE = new System.Windows.Forms.Button();
+            this.buttonFilter_KAE = new System.Windows.Forms.Button();
+            this.textBoxFilter_KAE = new System.Windows.Forms.TextBox();
+            this.buttonChangePath_KAE = new System.Windows.Forms.Button();
             this.groupBoxEnterData_KAE = new System.Windows.Forms.GroupBox();
             this.panelEnterData_KAE = new System.Windows.Forms.Panel();
             this.textBoxPhoneNumber_KAE = new System.Windows.Forms.TextBox();
@@ -52,24 +58,20 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             this.panelInfo_KAE = new System.Windows.Forms.Panel();
             this.textBoxInfo_KAE = new System.Windows.Forms.TextBox();
             this.dataGridView_KAE = new System.Windows.Forms.DataGridView();
-            this.buttonChangePath_KAE = new System.Windows.Forms.Button();
             this.openFileDialog_KAE = new System.Windows.Forms.OpenFileDialog();
             this.toolTip_KAE = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBoxFilter_KAE = new System.Windows.Forms.GroupBox();
-            this.textBoxFilter_KAE = new System.Windows.Forms.TextBox();
-            this.buttonFilter_KAE = new System.Windows.Forms.Button();
-            this.buttonReturnDefault_KAE = new System.Windows.Forms.Button();
-            this.buttonChange_KAE = new System.Windows.Forms.Button();
+            this.buttonFrequency_KAE = new System.Windows.Forms.Button();
             this.panelMenu_KAE.SuspendLayout();
+            this.groupBoxFilter_KAE.SuspendLayout();
             this.groupBoxEnterData_KAE.SuspendLayout();
             this.panelEnterData_KAE.SuspendLayout();
             this.panelInfo_KAE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_KAE)).BeginInit();
-            this.groupBoxFilter_KAE.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu_KAE
             // 
+            this.panelMenu_KAE.Controls.Add(this.buttonFrequency_KAE);
             this.panelMenu_KAE.Controls.Add(this.buttonChange_KAE);
             this.panelMenu_KAE.Controls.Add(this.groupBoxFilter_KAE);
             this.panelMenu_KAE.Controls.Add(this.buttonChangePath_KAE);
@@ -81,6 +83,70 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             this.panelMenu_KAE.Name = "panelMenu_KAE";
             this.panelMenu_KAE.Size = new System.Drawing.Size(242, 529);
             this.panelMenu_KAE.TabIndex = 0;
+            // 
+            // buttonChange_KAE
+            // 
+            this.buttonChange_KAE.Location = new System.Drawing.Point(84, 3);
+            this.buttonChange_KAE.Name = "buttonChange_KAE";
+            this.buttonChange_KAE.Size = new System.Drawing.Size(75, 37);
+            this.buttonChange_KAE.TabIndex = 7;
+            this.buttonChange_KAE.Text = "Изменить";
+            this.toolTip_KAE.SetToolTip(this.buttonChange_KAE, "Позволяет изменить данные о пациенте\r\n");
+            this.buttonChange_KAE.UseVisualStyleBackColor = true;
+            this.buttonChange_KAE.Click += new System.EventHandler(this.buttonChange_KAE_Click);
+            // 
+            // groupBoxFilter_KAE
+            // 
+            this.groupBoxFilter_KAE.Controls.Add(this.buttonReturnDefault_KAE);
+            this.groupBoxFilter_KAE.Controls.Add(this.buttonFilter_KAE);
+            this.groupBoxFilter_KAE.Controls.Add(this.textBoxFilter_KAE);
+            this.groupBoxFilter_KAE.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBoxFilter_KAE.Location = new System.Drawing.Point(0, 139);
+            this.groupBoxFilter_KAE.Name = "groupBoxFilter_KAE";
+            this.groupBoxFilter_KAE.Size = new System.Drawing.Size(242, 89);
+            this.groupBoxFilter_KAE.TabIndex = 6;
+            this.groupBoxFilter_KAE.TabStop = false;
+            this.groupBoxFilter_KAE.Text = "Фильтрация";
+            // 
+            // buttonReturnDefault_KAE
+            // 
+            this.buttonReturnDefault_KAE.Location = new System.Drawing.Point(84, 45);
+            this.buttonReturnDefault_KAE.Name = "buttonReturnDefault_KAE";
+            this.buttonReturnDefault_KAE.Size = new System.Drawing.Size(75, 37);
+            this.buttonReturnDefault_KAE.TabIndex = 8;
+            this.buttonReturnDefault_KAE.Text = "Вернуть";
+            this.toolTip_KAE.SetToolTip(this.buttonReturnDefault_KAE, "Возвращает таблице исходный вид\r\n");
+            this.buttonReturnDefault_KAE.UseVisualStyleBackColor = true;
+            this.buttonReturnDefault_KAE.Click += new System.EventHandler(this.buttonReturnDefault_KAE_Click);
+            // 
+            // buttonFilter_KAE
+            // 
+            this.buttonFilter_KAE.Location = new System.Drawing.Point(3, 45);
+            this.buttonFilter_KAE.Name = "buttonFilter_KAE";
+            this.buttonFilter_KAE.Size = new System.Drawing.Size(75, 37);
+            this.buttonFilter_KAE.TabIndex = 7;
+            this.buttonFilter_KAE.Text = "Применить\r\n";
+            this.toolTip_KAE.SetToolTip(this.buttonFilter_KAE, "Применяет фильтрацию к выбранному столбцу\r\n\r\n");
+            this.buttonFilter_KAE.UseVisualStyleBackColor = true;
+            this.buttonFilter_KAE.Click += new System.EventHandler(this.buttonFilter_Click);
+            // 
+            // textBoxFilter_KAE
+            // 
+            this.textBoxFilter_KAE.Location = new System.Drawing.Point(6, 19);
+            this.textBoxFilter_KAE.Name = "textBoxFilter_KAE";
+            this.textBoxFilter_KAE.Size = new System.Drawing.Size(230, 20);
+            this.textBoxFilter_KAE.TabIndex = 0;
+            // 
+            // buttonChangePath_KAE
+            // 
+            this.buttonChangePath_KAE.Location = new System.Drawing.Point(165, 3);
+            this.buttonChangePath_KAE.Name = "buttonChangePath_KAE";
+            this.buttonChangePath_KAE.Size = new System.Drawing.Size(75, 37);
+            this.buttonChangePath_KAE.TabIndex = 5;
+            this.buttonChangePath_KAE.Text = "Изменить путь";
+            this.toolTip_KAE.SetToolTip(this.buttonChangePath_KAE, "Позволяет изменить путь к CSV файлу\r\n");
+            this.buttonChangePath_KAE.UseVisualStyleBackColor = true;
+            this.buttonChangePath_KAE.Click += new System.EventHandler(this.buttonChangePath_KAE_Click);
             // 
             // groupBoxEnterData_KAE
             // 
@@ -231,7 +297,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             // buttonDelete_KAE
             // 
             this.buttonDelete_KAE.Enabled = false;
-            this.buttonDelete_KAE.Location = new System.Drawing.Point(84, 3);
+            this.buttonDelete_KAE.Location = new System.Drawing.Point(165, 96);
             this.buttonDelete_KAE.Name = "buttonDelete_KAE";
             this.buttonDelete_KAE.Size = new System.Drawing.Size(75, 37);
             this.buttonDelete_KAE.TabIndex = 1;
@@ -283,73 +349,20 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             this.dataGridView_KAE.TabIndex = 2;
             this.dataGridView_KAE.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_KAE_CellEnter);
             // 
-            // buttonChangePath_KAE
-            // 
-            this.buttonChangePath_KAE.Location = new System.Drawing.Point(165, 3);
-            this.buttonChangePath_KAE.Name = "buttonChangePath_KAE";
-            this.buttonChangePath_KAE.Size = new System.Drawing.Size(75, 37);
-            this.buttonChangePath_KAE.TabIndex = 5;
-            this.buttonChangePath_KAE.Text = "Изменить путь";
-            this.toolTip_KAE.SetToolTip(this.buttonChangePath_KAE, "Позволяет изменить путь к CSV файлу\r\n");
-            this.buttonChangePath_KAE.UseVisualStyleBackColor = true;
-            this.buttonChangePath_KAE.Click += new System.EventHandler(this.buttonChangePath_KAE_Click);
-            // 
             // openFileDialog_KAE
             // 
             this.openFileDialog_KAE.Filter = "Файлы CSV|*.csv";
             // 
-            // groupBoxFilter_KAE
+            // buttonFrequency_KAE
             // 
-            this.groupBoxFilter_KAE.Controls.Add(this.buttonReturnDefault_KAE);
-            this.groupBoxFilter_KAE.Controls.Add(this.buttonFilter_KAE);
-            this.groupBoxFilter_KAE.Controls.Add(this.textBoxFilter_KAE);
-            this.groupBoxFilter_KAE.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBoxFilter_KAE.Location = new System.Drawing.Point(0, 139);
-            this.groupBoxFilter_KAE.Name = "groupBoxFilter_KAE";
-            this.groupBoxFilter_KAE.Size = new System.Drawing.Size(242, 89);
-            this.groupBoxFilter_KAE.TabIndex = 6;
-            this.groupBoxFilter_KAE.TabStop = false;
-            this.groupBoxFilter_KAE.Text = "Фильтрация";
-            // 
-            // textBoxFilter_KAE
-            // 
-            this.textBoxFilter_KAE.Location = new System.Drawing.Point(6, 19);
-            this.textBoxFilter_KAE.Name = "textBoxFilter_KAE";
-            this.textBoxFilter_KAE.Size = new System.Drawing.Size(230, 20);
-            this.textBoxFilter_KAE.TabIndex = 0;
-            // 
-            // buttonFilter_KAE
-            // 
-            this.buttonFilter_KAE.Location = new System.Drawing.Point(3, 45);
-            this.buttonFilter_KAE.Name = "buttonFilter_KAE";
-            this.buttonFilter_KAE.Size = new System.Drawing.Size(75, 37);
-            this.buttonFilter_KAE.TabIndex = 7;
-            this.buttonFilter_KAE.Text = "Применить\r\n";
-            this.toolTip_KAE.SetToolTip(this.buttonFilter_KAE, "Применяет фильтрацию к выбранному столбцу\r\n\r\n");
-            this.buttonFilter_KAE.UseVisualStyleBackColor = true;
-            this.buttonFilter_KAE.Click += new System.EventHandler(this.buttonFilter_Click);
-            // 
-            // buttonReturnDefault_KAE
-            // 
-            this.buttonReturnDefault_KAE.Location = new System.Drawing.Point(84, 45);
-            this.buttonReturnDefault_KAE.Name = "buttonReturnDefault_KAE";
-            this.buttonReturnDefault_KAE.Size = new System.Drawing.Size(75, 37);
-            this.buttonReturnDefault_KAE.TabIndex = 8;
-            this.buttonReturnDefault_KAE.Text = "Вернуть";
-            this.toolTip_KAE.SetToolTip(this.buttonReturnDefault_KAE, "Возвращает таблице исходный вид\r\n");
-            this.buttonReturnDefault_KAE.UseVisualStyleBackColor = true;
-            this.buttonReturnDefault_KAE.Click += new System.EventHandler(this.buttonReturnDefault_KAE_Click);
-            // 
-            // buttonChange_KAE
-            // 
-            this.buttonChange_KAE.Location = new System.Drawing.Point(3, 46);
-            this.buttonChange_KAE.Name = "buttonChange_KAE";
-            this.buttonChange_KAE.Size = new System.Drawing.Size(75, 37);
-            this.buttonChange_KAE.TabIndex = 7;
-            this.buttonChange_KAE.Text = "Изменить";
-            this.toolTip_KAE.SetToolTip(this.buttonChange_KAE, "Позволяет изменить данные о пациенте\r\n");
-            this.buttonChange_KAE.UseVisualStyleBackColor = true;
-            this.buttonChange_KAE.Click += new System.EventHandler(this.buttonChange_KAE_Click);
+            this.buttonFrequency_KAE.Location = new System.Drawing.Point(3, 46);
+            this.buttonFrequency_KAE.Name = "buttonFrequency_KAE";
+            this.buttonFrequency_KAE.Size = new System.Drawing.Size(75, 37);
+            this.buttonFrequency_KAE.TabIndex = 8;
+            this.buttonFrequency_KAE.Text = "Статистика";
+            this.toolTip_KAE.SetToolTip(this.buttonFrequency_KAE, "Добавляет строку в CSV файл с данными пациента\r\n");
+            this.buttonFrequency_KAE.UseVisualStyleBackColor = true;
+            this.buttonFrequency_KAE.Click += new System.EventHandler(this.buttonFrequency_KAE_Click);
             // 
             // FormMain
             // 
@@ -364,14 +377,14 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "База Данных Поликлинники";
             this.panelMenu_KAE.ResumeLayout(false);
+            this.groupBoxFilter_KAE.ResumeLayout(false);
+            this.groupBoxFilter_KAE.PerformLayout();
             this.groupBoxEnterData_KAE.ResumeLayout(false);
             this.panelEnterData_KAE.ResumeLayout(false);
             this.panelEnterData_KAE.PerformLayout();
             this.panelInfo_KAE.ResumeLayout(false);
             this.panelInfo_KAE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_KAE)).EndInit();
-            this.groupBoxFilter_KAE.ResumeLayout(false);
-            this.groupBoxFilter_KAE.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -408,6 +421,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
         private System.Windows.Forms.TextBox textBoxFilter_KAE;
         private System.Windows.Forms.Button buttonReturnDefault_KAE;
         private System.Windows.Forms.Button buttonChange_KAE;
+        private System.Windows.Forms.Button buttonFrequency_KAE;
     }
 }
 

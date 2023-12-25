@@ -147,5 +147,33 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6.Lib
                 File.AppendAllText(path, ln, Encoding.UTF8);
             }
         }
+
+        static public int StatFrequencyWord(string word, string columnName)
+        {
+            DataTable dt = GetData();
+            int c = 0;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (Convert.ToString(row[columnName]) == word)
+                    c++;
+            }
+
+            return c;
+        }
+
+        static public List<string> UniqueWords(string columnName)
+        {
+            List<string> words = new List<string>();
+
+            DataTable dt = GetData();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!words.Contains(Convert.ToString(row[columnName])))
+                    words.Add(Convert.ToString(row[columnName]));
+            }
+
+            return words;
+        }
     }
 }
