@@ -154,7 +154,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
 
         private void buttonFilter_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBoxFilter_KAE.Text))
+            if (!String.IsNullOrEmpty(textBoxFilter_KAE.Text) && dataGridView_KAE.Rows.Count >= 1)
             {
                 try
                 {
