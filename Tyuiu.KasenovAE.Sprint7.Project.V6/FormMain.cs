@@ -239,5 +239,11 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonInfo_KAE_Click(object sender, EventArgs e)
+        {
+            FormInfo form = new FormInfo();
+            form.Show();
+        }
     }
 }

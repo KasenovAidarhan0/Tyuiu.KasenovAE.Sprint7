@@ -30,6 +30,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu_KAE = new System.Windows.Forms.Panel();
             this.buttonChange_KAE = new System.Windows.Forms.Button();
             this.groupBoxFilter_KAE = new System.Windows.Forms.GroupBox();
@@ -61,6 +62,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             this.openFileDialog_KAE = new System.Windows.Forms.OpenFileDialog();
             this.toolTip_KAE = new System.Windows.Forms.ToolTip(this.components);
             this.buttonFrequency_KAE = new System.Windows.Forms.Button();
+            this.buttonInfo_KAE = new System.Windows.Forms.Button();
             this.panelMenu_KAE.SuspendLayout();
             this.groupBoxFilter_KAE.SuspendLayout();
             this.groupBoxEnterData_KAE.SuspendLayout();
@@ -71,6 +73,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             // 
             // panelMenu_KAE
             // 
+            this.panelMenu_KAE.Controls.Add(this.buttonInfo_KAE);
             this.panelMenu_KAE.Controls.Add(this.buttonFrequency_KAE);
             this.panelMenu_KAE.Controls.Add(this.buttonChange_KAE);
             this.panelMenu_KAE.Controls.Add(this.groupBoxFilter_KAE);
@@ -360,9 +363,20 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
             this.buttonFrequency_KAE.Size = new System.Drawing.Size(75, 37);
             this.buttonFrequency_KAE.TabIndex = 8;
             this.buttonFrequency_KAE.Text = "Статистика";
-            this.toolTip_KAE.SetToolTip(this.buttonFrequency_KAE, "Добавляет строку в CSV файл с данными пациента\r\n");
+            this.toolTip_KAE.SetToolTip(this.buttonFrequency_KAE, "Выводит статистику данных\r\n");
             this.buttonFrequency_KAE.UseVisualStyleBackColor = true;
             this.buttonFrequency_KAE.Click += new System.EventHandler(this.buttonFrequency_KAE_Click);
+            // 
+            // buttonInfo_KAE
+            // 
+            this.buttonInfo_KAE.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_KAE.Image")));
+            this.buttonInfo_KAE.Location = new System.Drawing.Point(3, 89);
+            this.buttonInfo_KAE.Name = "buttonInfo_KAE";
+            this.buttonInfo_KAE.Size = new System.Drawing.Size(52, 44);
+            this.buttonInfo_KAE.TabIndex = 9;
+            this.toolTip_KAE.SetToolTip(this.buttonInfo_KAE, "Информация о программе");
+            this.buttonInfo_KAE.UseVisualStyleBackColor = true;
+            this.buttonInfo_KAE.Click += new System.EventHandler(this.buttonInfo_KAE_Click);
             // 
             // FormMain
             // 
@@ -422,6 +436,7 @@ namespace Tyuiu.KasenovAE.Sprint7.Project.V6
         private System.Windows.Forms.Button buttonReturnDefault_KAE;
         private System.Windows.Forms.Button buttonChange_KAE;
         private System.Windows.Forms.Button buttonFrequency_KAE;
+        private System.Windows.Forms.Button buttonInfo_KAE;
     }
 }
 
